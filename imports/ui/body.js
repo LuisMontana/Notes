@@ -80,7 +80,7 @@ Template.body.events({
     const text = target.text.value;
     const priority = target.dropdown.selectedIndex;    
  
-    // Insert a task into the collection
+    // Insert a note into the collection
     Meteor.call('notes.insert', text, priority);
  
     // Clear form
