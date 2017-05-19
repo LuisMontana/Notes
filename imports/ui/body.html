@@ -1,18 +1,45 @@
 <body>
   <div class="container">
     <header>
-      <h1>Notes ({{incompleteCount}} pending)</h1>
-
-      <label class="hide-completed">
-        <input type="checkbox" />
-        Hide Completed
-      </label> 
+      <h1 align="center">Notes ({{incompleteCount}} pending)</h1>
+      <div>
+      <label> 
+        Sort by:
+        <button type="button" class="sort-notes-date"> 
+          {{#if isDateAscending}}
+            Most recent
+          {{else}}
+            Least recent
+          {{/if}}
+        </button>
+        <button type="button" class="sort-notes-priority"> 
+          {{#if isPriorityAscending}}
+            High priority
+          {{else}}
+            Low priority
+          {{/if}}
+        </button>
+      </label>
+     </div>
 
       {{> loginButtons}}
 
       {{#if currentUser}}
         <form class="new-note">
-          <input type="text" name="text" placeholder="Type to add new tasks" />
+          <input type="text" name="text" placeholder="Type to add new note" />
+          <select class="dropdown" name="dropdown">
+            <option value='' disabled selected style='display:none;'>Priority</option>
+            <option>1</option> 
+            <option>2</option>
+            <option>3</option>
+            <option>4</option> 
+            <option>5</option>
+            <option>6</option>
+            <option>7</option> 
+            <option>8</option>
+            <option>9</option>
+            <option>10</option> 
+          </select>
         </form>
       {{/if}}
   
