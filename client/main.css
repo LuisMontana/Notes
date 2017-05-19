@@ -23,10 +23,14 @@ body {
   background: white;
 }
  
-header {
-  background: #f1dac4;
-  padding: 20px 15px 15px 15px;
+header {  
+  padding-top: 20px;
 }
+
+header div{
+  padding-bottom: 5px;
+}
+
  
 #login-buttons {
   display: block;
@@ -45,20 +49,20 @@ form {
   margin-bottom: -10px;
   position: relative;
 }
+
+section div{
+  padding-top: 20px;
+}
  
 .new-note input {
   box-sizing: border-box;
   padding: 10px 0;
   background: transparent;
-  border: none;
   width: 100%;
   padding-right: 80px;
   font-size: 1em;
 }
  
-.new-note input:focus{
-  outline: 0;
-}
  
 ul {
   margin: 0;

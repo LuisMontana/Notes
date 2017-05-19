@@ -19,11 +19,13 @@ Meteor.methods({
     if (! Meteor.userId()) {
       throw new Meteor.Error('not-authorized');
     }
+    const date = new Date();
  
     Notes.insert({
       text,
       priority,
-      createdAt: new Date(),
+      createdAt: date,
+      easyDate: date.toDateString(),
       owner: Meteor.userId(),
       username: Meteor.user().username,
     });
